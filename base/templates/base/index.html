@@ -1,0 +1,76 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block content %}
+
+    <div class="intro-wrapper">
+        {% include 'base/navbar.html' %}
+
+        <div class="intro-leftColumn">
+            <img id='profilePic'src="{% static 'images/Dominik.png'%}" alt="">
+        </div>
+        <div class="intro-rightColumn">
+            <h2 class="tittle">Hello, my name is Dominik. I am Developer living in Cracow.</h2>
+            <a href="{% url 'contact'%}" class="btn">Hire me!</a>
+        </div>
+        
+    </div>
+    <div id="theme-options-wrapper">
+        <h4>Perosnalize my website</h4>
+        <div id="theme-dots-wrapper">
+            <div data-mode="light" id="light-mode" class="theme-dot"></div>
+            <div data-mode="blue" id="blue-mode" class="theme-dot"></div>
+            <div data-mode="green" id="green-mode" class="theme-dot"></div>
+            <div data-mode="purple" id="purple-mode" class="theme-dot"></div>
+        </div>
+        <small id="settings-note">*Theme settings will be saved for<br>your next vist</small>
+    </div>
+    <div class="about">
+        <h2>About</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit necessitatibus eos ut rem vitae laborum corporis, maiores, commodi explicabo iusto quibusdam sunt saepe excepturi? Expedita commodi ratione praesentium dolorum a!Lorem</p>
+    </div>
+    <div class="about skills">
+        
+        <div class="skills-lefColumn">
+            <h2 style='margin-bottom: 15px'>Skills</h2>
+            <div id="skills-list">
+                <ul>
+                    <li>Python</li>
+                    <li>Django</li>
+                    <li>JavaScript</li>
+                    <li>React</li>
+                    <li>WordPress</li>
+                </ul>
+
+                <ul>
+                    <li>HTML/CSS</li>
+                    <li>Bootstrap</li>
+                    <li>Material UI</li>
+                    <li>Heroku</li>
+                    <li>Google Firebase</li>
+                </ul>
+
+            </div>
+            <a target="_blank" href='{% static 'resume.pdf' %}' style='font-size:large;margin-top: 20px'><b>Download my resume</b></a>
+        </div>
+        <!-- <div class="skills-rightColumn">
+            <h2>Find me</h2>
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-linkedin"></a>
+            
+        </div> -->
+        
+    </div>
+    <div class="about">
+        <button class='btn'><a href='#'>Checkout my projects</a></button>
+    </div>
+    <div class="footer">
+        <p>&copy; Dominik Bąk 2020</p>
+        <div class="links">
+            <a target="_blank" href="https://www.facebook.com/dominikbak93/" class="fa fa-facebook"></a>
+            <a target="_blank" href="https://www.linkedin.com/in/dominik-b%C4%85k-6332a31a0/" class="fa fa-linkedin"></a>
+            <a target="_blank" href="https://github.com/bakdominik" class="fa fa-github"></a>
+        </div>
+        
+    </div>
+
+{% endblock content %}
