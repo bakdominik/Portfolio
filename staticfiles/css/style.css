@@ -11,6 +11,7 @@
 	--buttonColor:black;
 }
 
+
 html, body {
     background-color: var(--mainColor);
     background: linear-gradient(90deg, var(--mainColor) 0%, var(--gradientColor) 100%);
@@ -240,36 +241,6 @@ small, h4 {
 }
 a:hover {
     color: var(--secondaryText);
-}
-.project {
-    text-align: center;
-}
-
-.project-image {
-    border-radius: 5px 5px 0px 0px;
-    border: 1px solid var(--borderColor);
-    margin: 20px 0px;
-
-}
-.project-image > img {
-    max-width:100%;
-    max-height:100%;
-}
-.project-description {
-    text-align: center;
-    margin: 30px 0px 50px 0px;
-}
-.tag{
-	display:inline-block;
-	color:#fff;
-	background-color: #888;
-	margin: 2px;
-	padding: 2px 5px;
-    font-size: 12px;
-
-}
-.view {
-    margin: 10px;
 }
 
 @media screen and (max-width: 800px){
