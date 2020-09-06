@@ -18,7 +18,7 @@
                     <div id='dot-3' class="dot"></div>
                 </div>
             </div>
-            <img src="{% static {{project.thumbnail.url}} %}" alt="">
+            <img src="{{project.thumbnail.url}}" alt="">
         </div>
         
         {% for tag in project.tags.all %}
