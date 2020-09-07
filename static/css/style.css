@@ -1,14 +1,14 @@
 :root{
-    --mainColor:#eaeaea;
-    --gradientColor:#9d9292;
-	--secondaryColor:#fff;
-	--borderColor:#c1c1c1;
-	--mainText:black;
-	--secondaryText:#4b5156;
-	--themeDotBorder:#24292e;
-	--previewBg:rgb(251, 249, 243, 0.8);
-	--previewShadow:#f0ead6;
-	--buttonColor:black;
+	--mainColor:#1D1C24;
+	--gradientColor: #EC031C;
+	--secondaryColor: #292733;
+	--borderColor:#164D56;
+	--mainText:#fff;
+	--secondaryText:#eeeeee;
+	--themeDotBorder:#FFF;
+	--previewBg:rgb(25, 39, 52, 0.8);
+	--previewShadow:#111921;
+	--buttonColor:#7C1121;
 }
 
 html, body {
@@ -20,12 +20,12 @@ html, body {
     scroll-behavior: smooth;
 }
 body *{
-	transition: 0.3s;
+    transition: 0.3s;
 }
 h1,h2,h3,h4,h5,h6,strong {
-    text-shadow: 3px 3px 2px rgba(150, 150, 150, 1);
+    text-shadow: 1px 1px 1px rgba(150, 150, 150, 1);
     color: var(--mainText);
-    font-family: 'Source Code Pro', monospace;
+    font-family: 'Source Code Pro';
 }
 a {
     text-decoration: none;
@@ -35,7 +35,7 @@ a {
 
 p, small, li, span, label, input, textarea {
     color: var(--secondaryText);
-    font-family: 'Roboto', monospace;
+    font-family: "PT Mono", Sans-serif;
 }
 h1 { font-size: 56px;}
 h2 { font-size: 36px;}
@@ -63,15 +63,27 @@ h6 { font-size: 16px;}
     background-color: var(--secondaryColor);
     border-radius: 5px;
     border: 1px solid var(--borderColor);
+    
+}
+*.container {
+    -webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 1s; /* Firefox < 16 */
+     -ms-animation: fadein 1s; /* Internet Explorer */
+      -o-animation: fadein 1s; /* Opera < 12.1 */
+         animation: fadein 1s;
 }
 .intro-wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 3em 30em;
+    grid-template-rows: 3em 35em;
     grid-template-areas: 
         'nav-wrapper nav-wrapper'
-        'intro-leftColumn intro-rightColumn'
+        'intro-rightColumn intro-leftColumn '
     ;
+}
+li a { 
+    font-size: 20px; 
+
 }
 .nav-wrapper {
     border-radius: 5px 5px 0 0;
@@ -113,7 +125,9 @@ h6 { font-size: 16px;}
 .intro-leftColumn {
     display: flex;
     grid-area: intro-leftColumn;
-	align-items: center;
+    align-items: center;
+    justify-content: center;
+    
 }
 #profilePic {
     display: block;
@@ -126,12 +140,63 @@ h6 { font-size: 16px;}
     box-shadow: 4px 11px 20px -2px rgba(0,0,0,0.75);
 	object-fit: cover;
 }
+#preview-shadow{
+    display: flex;
+	background-color: var(--previewShadow);
+	max-width: 300px;
+	height: 250px;
+	padding-left: 30px;
+	padding-top: 30px;
+}
+
+#preview{
+	width: 100%;
+	border:1.5px solid #17a2b8;
+	background-color: var(--previewBg);
+	padding: 35px;
+	position: relative;
+}
+
+.corner{
+	width:7px;
+	height: 7px;
+	border-radius: 50%;
+	border:1.5px solid #17a2b8;
+	background-color: #fff;
+	position: absolute;
+}
+
+#corner-tl{
+	top:-5px;
+	left: -5px
+}
+
+#corner-tr{
+	top:-5px;
+	right: -5px
+}
+
+
+#corner-br{
+	bottom:-5px;
+	right: -5px
+}
+
+
+#corner-bl{
+	bottom:-5px;
+	left: -5px
+}
+.tittle {
+    margin: 0;
+}
 .intro-rightColumn  {
     display: flex;
     flex-direction: column;
     justify-content: center;
     grid-area: intro-rightColumn;
-    max-width: 450px;
+    align-content: center;
+    padding: 60px;
 }
 #theme-options-wrapper{
     margin-bottom: 50px;
@@ -275,7 +340,7 @@ a:hover {
 @media screen and (max-width: 800px){
 	.intro-wrapper{
         grid-template-columns: 1fr;
-        grid-template-rows: 3em 20em;
+        grid-template-rows: 3em 25em;
 		grid-template-areas: 
 			'nav-wrapper'
 			'intro-leftColumn'
@@ -288,10 +353,10 @@ a:hover {
         height: 180px;
         width: 180px;
     }
+
 	.intro-rightColumn{
         justify-content: center;
         max-width: 100%;
-        padding: 20px;
 	}
 
 }
@@ -302,4 +367,25 @@ a:hover {
 }
 
 
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
 
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}

@@ -6,10 +6,20 @@
         {% include 'base/navbar.html' %}
 
         <div class="intro-leftColumn">
-            <img id='profilePic'src="{% static 'images/Dominik.png'%}" alt="">
+            
+            <div id="preview-shadow">
+                <div id="preview">
+                    <div id="corner-tl" class="corner"></div>
+                    <div id="corner-tr" class="corner"></div>
+                    <img id='profilePic'src="{% static 'images/Dominik.png'%}" alt="">
+                    <div id="corner-br" class="corner"></div>
+                    <div id="corner-bl" class="corner"></div>
+                </div>
+            </div>
         </div>
         <div class="intro-rightColumn">
-            <h2 class="tittle">Hello, my name is Dominik. I am Developer living in Cracow.</h2>
+            <h2 class="tittle">HELLO, MY NAME IS DOMINIK</h2>
+            <h3 class="subtittle">I am Developer living in Cracow.</h3>
             <a href="mailto:dominikbak93@gmail.com" class="btn">Hire me!</a>
         </div>
         
@@ -17,7 +27,7 @@
     <div id="theme-options-wrapper">
         <h3>Perosnalize my website</h3>
         <div id="theme-dots-wrapper">
-            <div data-mode="light" id="light-mode" class="theme-dot"></div>
+            <div data-mode="style" id="light-mode" class="theme-dot"></div>
             <div data-mode="blue" id="blue-mode" class="theme-dot"></div>
             <div data-mode="green" id="green-mode" class="theme-dot"></div>
             <div data-mode="purple" id="purple-mode" class="theme-dot"></div>
@@ -55,7 +65,7 @@
         
     </div>
     <div class="about">
-        <button class='btn'><a href='#'>Checkout my projects</a></button>
+        <button class='btn'><a href='{% url 'projects'%}'>Checkout my projects</a></button>
     </div>
     {% include 'base/footer.html' %}
 
